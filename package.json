@@ -1,0 +1,20 @@
+{
+  "name": "sign_verify_encrypt_decrypt",
+  "version": "1.0.0",
+  "description": "this is a sample node js to sign,verify,encrypt and decrypt message ",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "oussama gharsallaoui",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
