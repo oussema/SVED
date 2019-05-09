@@ -21,14 +21,10 @@ const { privateKey, publicKey } = crypto.generateKeyPairSync('ec', {
         format: 'pem'
       }
   });
-  var message="this is an example of message to treat";
-  var signatureOfMessage=sved.signMessage(message,privateKey);
+const message="this is an example of message to treat";
+const signatureOfMessage=sved.signMessage(message,privateKey);
   var encryptedMessage=sved.encryptMessage(message,encryptionKey);
   console.log('\n=====this is the signature of the message=====\n'+signatureOfMessage);
   console.log('\n====verify this messaeg signature with publickey===\n'+sved.verifySignedMessage(message,publicKey,signatureOfMessage));
   console.log('\n==encryption==\n'+encryptedMessage);
   console.log('\n==decryption==\n'+sved.decryptMessage(encryptedMessage,encryptionKey)+'\n');
-let port = 1234;
-app.listen(port, () => {
-    console.log('Server is up and running on port numner ' + port);
-});
